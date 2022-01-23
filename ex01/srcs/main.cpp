@@ -16,4 +16,6 @@ int
 	s2.attack("Scav First");
 	s1.takeDamage(s2.getAttackDamage());
 	s1.beRepaired(10);
+	s1.guardGate();
+	s2.guardGate();
 }

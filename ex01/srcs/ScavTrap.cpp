@@ -91,3 +91,9 @@ void
 		std::cout << " points of hitpoints!" << std::endl;
 	this->setHitpoints(this->getHitpoints() + amount);
 }
+
+void
+	ScavTrap::guardGate()
+{
+	std::cout << "ScavTrap " << this->getName() << " has enterred in Gate keeper mode" << std::endl;
+}
