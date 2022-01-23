@@ -22,7 +22,7 @@ ClapTrap::ClapTrap(const ClapTrap &other)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap " << this->getName() << " destructor called" << std::endl;
+	std::cout << "ClapTrap " << this->getName() << " was destructed" << std::endl;
 }
 
 ClapTrap
