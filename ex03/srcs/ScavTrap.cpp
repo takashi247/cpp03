@@ -7,7 +7,10 @@ ScavTrap::ScavTrap():
 	this->setHitpoints(HITPOINTS_ST);
 	this->setEnergyPoints(ENERGY_POINTS_ST);
 	this->setAttackDamage(ATTACK_DAMAGE_ST);
-	std::cout << "ScavTrap without a name was constructed" << std::endl;
+	if (this->getName() != "")
+		std::cout << "ScavTrap " << this->getName() << " was constructed" << std::endl;
+	else
+		std::cout << "ScavTrap without a name was constructed" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name):

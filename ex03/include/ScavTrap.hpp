@@ -16,7 +16,6 @@ class ScavTrap : virtual public ClapTrap
 		void		takeDamage(unsigned int amount);
 		void		beRepaired(unsigned int amount);
 		void		guardGate();
-	private:
 		static const unsigned int	HITPOINTS_ST = 100;
 		static const unsigned int	ENERGY_POINTS_ST = 50;
 		static const unsigned int	ATTACK_DAMAGE_ST = 20;

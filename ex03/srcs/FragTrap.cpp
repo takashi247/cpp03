@@ -7,7 +7,10 @@ FragTrap::FragTrap():
 	this->setHitpoints(HITPOINTS_FT);
 	this->setEnergyPoints(ENERGY_POINTS_FT);
 	this->setAttackDamage(ATTACK_DAMAGE_FT);
-	std::cout << "FragTrap without a name was constructed" << std::endl;
+	if (this->getName() != "")
+		std::cout << "FragTrap " << this->getName() << " was constructed" << std::endl;
+	else
+		std::cout << "FragTrap without a name was constructed" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name):

@@ -4,17 +4,25 @@
 const std::string	DiamondTrap::CLAP_NAME_SUFFIX = "_clap_name";
 
 DiamondTrap::DiamondTrap():
-	name(""), FragTrap(), ScavTrap()
+	ClapTrap(), FragTrap(), ScavTrap(), name("")
 {
 	this->ClapTrap::setName(this->getName() + CLAP_NAME_SUFFIX);
+	this->setHitpoints(FragTrap::HITPOINTS_FT);
+	this->setEnergyPoints(ScavTrap::ENERGY_POINTS_ST);
+	this->ScavTrap::setAttackDamage(FragTrap::ATTACK_DAMAGE_FT);
 	std::cout << "DiamondTrap without a name was constructed" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string name):
-	name(name), FragTrap(), ScavTrap()
+	ClapTrap(name + CLAP_NAME_SUFFIX), FragTrap(), ScavTrap(), name(name)
 {
-	this->ClapTrap::setName(this->DiamondTrap::getName() + CLAP_NAME_SUFFIX);
+	this->setHitpoints(FragTrap::HITPOINTS_FT);
+	this->setEnergyPoints(ScavTrap::ENERGY_POINTS_ST);
+	this->ScavTrap::setAttackDamage(FragTrap::ATTACK_DAMAGE_FT);
 	std::cout << "DiamondTrap " << this->getName() << " was constructed" << std::endl;
+	std::cout << "Hitpoints: " << this->getHitpoints() << std::endl;
+	std::cout << "Energy points: " << this->getEnergyPoints() << std::endl;
+	std::cout << "Attack damage: " << this->getAttackDamage() << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &other)
@@ -35,6 +43,9 @@ DiamondTrap
 	{
 		this->DiamondTrap::setName(other.DiamondTrap::getName());
 		this->ClapTrap::setName(other.ClapTrap::getName());
+		this->setHitpoints(other.getHitpoints());
+		this->setEnergyPoints(other.getEnergyPoints());
+		this->setAttackDamage(other.getAttackDamage());
 	}
 	return (*this);
 }
