@@ -1,21 +1,26 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include <iostream>
 
 int
 	main()
 {
 	ClapTrap	c1("Clap First");
-	ClapTrap	c2("Clap Second");
+	ClapTrap	*c2 = new FragTrap("Clap Second");
 	ScavTrap	s1("Scav First");
 	ScavTrap	s2("Scav Second");
 	FragTrap	f1("Frag First");
-	FragTrap	f2("Frag Second");
+	FragTrap	f2;
 
+	std::cout << std::endl;
+	f2 = f1;
 	s1.attack("Clap First");
 	c1.takeDamage(s1.getAttackDamage());
 	c1.beRepaired(50);
-	c2.beRepaired(1);
+	c2->beRepaired(1);
+	c2->attack("Clap First");
+	c1.takeDamage(c2->getAttackDamage());
 	s2.attack("Scav First");
 	s1.takeDamage(s2.getAttackDamage());
 	s1.beRepaired(10);
@@ -29,4 +34,6 @@ int
 	f1.takeDamage(s1.getAttackDamage());
 	f1.highFivesGuys();
 	f2.highFivesGuys();
+	std::cout << std::endl;
+	delete c2;
 }
