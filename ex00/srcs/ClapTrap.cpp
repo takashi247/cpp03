@@ -11,7 +11,7 @@ ClapTrap::ClapTrap():
 	std::cout << "ClapTrap without a name was constructed" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name):
+ClapTrap::ClapTrap(const std::string name):
 	name(name),
 	hitpoints(HITPOINTS_CT),
 	energy_points(ENERGY_POINTS_CT),
