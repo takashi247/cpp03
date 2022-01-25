@@ -4,18 +4,18 @@
 
 ClapTrap::ClapTrap():
 	name(""),
-	hitpoints(HITPOINTS_CT),
-	energy_points(ENERGY_POINTS_CT),
-	attack_damage(ATTACK_DAMAGE_CT)
+	hitpoints(ClapTrap::HITPOINTS_CT),
+	energy_points(ClapTrap::ENERGY_POINTS_CT),
+	attack_damage(ClapTrap::ATTACK_DAMAGE_CT)
 {
 	std::cout << "ClapTrap without a name was constructed" << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string name):
 	name(name),
-	hitpoints(HITPOINTS_CT),
-	energy_points(ENERGY_POINTS_CT),
-	attack_damage(ATTACK_DAMAGE_CT)
+	hitpoints(ClapTrap::HITPOINTS_CT),
+	energy_points(ClapTrap::ENERGY_POINTS_CT),
+	attack_damage(ClapTrap::ATTACK_DAMAGE_CT)
 {
 	std::cout << "ClapTrap " << name << " was constructed" << std::endl;
 }
