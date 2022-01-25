@@ -56,13 +56,13 @@ void
 void
 	DiamondTrap::takeDamage(unsigned int amount)
 {
-	std::string		name = this->getName();
+	std::string		my_name = this->getName();
 	unsigned int	current_hp = this->getHitpoints();
 	if (current_hp == 0)
-		std::cout << "DiamondTrap " << name << " has already been destroyed..." << std::endl;
+		std::cout << "DiamondTrap " << my_name << " has already been destroyed..." << std::endl;
 	else
 	{
-		std::cout << "DiamondTrap " << name << " get attacked, taking " \
+		std::cout << "DiamondTrap " << my_name << " get attacked, taking " \
 		<< amount;
 		if (amount == 1)
 			std::cout << " point of damage!" << std::endl;
@@ -72,7 +72,7 @@ void
 			this->setHitpoints(current_hp - amount);
 		else
 		{
-			std::cout << "DiamondTrap " << name << " was destroyed..." << std::endl;
+			std::cout << "DiamondTrap " << my_name << " was destroyed..." << std::endl;
 			this->setHitpoints(0);
 		}
 	}
@@ -104,7 +104,7 @@ const std::string
 }
 
 void
-	DiamondTrap::setName(std::string const name)
+	DiamondTrap::setName(std::string const new_name)
 {
-	this->name = name;
+	this->name = new_name;
 }

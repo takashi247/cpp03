@@ -18,7 +18,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		void				beRepaired(unsigned int amount);
 		void				whoAmI();
 		const std::string	&getName() const;
-		void				setName(std::string const name);
+		void				setName(std::string const new_name);
 	private:
 		std::string					name;
 		static const std::string	CLAP_NAME_SUFFIX;
