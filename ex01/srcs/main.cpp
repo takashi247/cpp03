@@ -6,7 +6,7 @@ int
 	main()
 {
 	ClapTrap	c1("Clap First");
-	ClapTrap	*c2 = new ScavTrap("Clap Second");
+	ClapTrap	*c2 = new ScavTrap("Clap Second"); // initiate ScavTrap as ClapTrap
 	ScavTrap	s1("Scav First");
 	ScavTrap	s2(s1);
 	ScavTrap	s3;
@@ -27,5 +27,5 @@ int
 	s2.guardGate();
 	s3.guardGate();
 	std::cout << std::endl;
-	delete c2;
+	delete c2; // test if destructor of ScavTrap is called properly
 }
