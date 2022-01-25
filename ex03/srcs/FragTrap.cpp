@@ -13,7 +13,7 @@ FragTrap::FragTrap():
 		std::cout << "FragTrap without a name was constructed" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name):
+FragTrap::FragTrap(const std::string name):
 	ClapTrap(name)
 {
 	this->setHitpoints(HITPOINTS_FT);
@@ -98,5 +98,5 @@ void
 void
 	FragTrap::highFivesGuys()
 {
-	std::cout << "FragTrap " << this->getName() << " requested a positive hight fives" << std::endl;
+	std::cout << "FragTrap " << this->getName() << " requested a positive high fives" << std::endl;
 }

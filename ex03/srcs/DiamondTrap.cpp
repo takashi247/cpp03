@@ -13,16 +13,13 @@ DiamondTrap::DiamondTrap():
 	std::cout << "DiamondTrap without a name was constructed" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name):
+DiamondTrap::DiamondTrap(const std::string name):
 	ClapTrap(name + CLAP_NAME_SUFFIX), FragTrap(), ScavTrap(), name(name)
 {
 	this->setHitpoints(FragTrap::HITPOINTS_FT);
 	this->setEnergyPoints(ScavTrap::ENERGY_POINTS_ST);
 	this->ScavTrap::setAttackDamage(FragTrap::ATTACK_DAMAGE_FT);
 	std::cout << "DiamondTrap " << this->getName() << " was constructed" << std::endl;
-	std::cout << "Hitpoints: " << this->getHitpoints() << std::endl;
-	std::cout << "Energy points: " << this->getEnergyPoints() << std::endl;
-	std::cout << "Attack damage: " << this->getAttackDamage() << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &other)
@@ -97,7 +94,7 @@ void
 	DiamondTrap::whoAmI()
 {
 	std::cout << "My name is DiamondTrap " << this->DiamondTrap::getName() << \
-	" and my clapTrap name is " << this->ClapTrap::getName() << std::endl;
+	" and my ClapTrap name is " << this->ClapTrap::getName() << std::endl;
 }
 
 const std::string

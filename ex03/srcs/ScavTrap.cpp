@@ -13,7 +13,7 @@ ScavTrap::ScavTrap():
 		std::cout << "ScavTrap without a name was constructed" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name):
+ScavTrap::ScavTrap(const std::string name):
 	ClapTrap(name)
 {
 	this->setHitpoints(HITPOINTS_ST);
