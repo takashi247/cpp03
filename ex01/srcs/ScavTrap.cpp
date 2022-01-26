@@ -58,13 +58,13 @@ void
 void
 	ScavTrap::takeDamage(unsigned int amount)
 {
-	std::string		name = this->getName();
+	std::string		my_name = this->getName();
 	unsigned int	current_hp = this->getHitpoints();
 	if (current_hp == 0)
-		std::cout << "ScavTrap " << name << " has already been destroyed..." << std::endl;
+		std::cout << "ScavTrap " << my_name << " has already been destroyed..." << std::endl;
 	else
 	{
-		std::cout << "ScavTrap " << name << " get attacked, taking " \
+		std::cout << "ScavTrap " << my_name << " get attacked, taking " \
 		<< amount;
 		if (amount == 1)
 			std::cout << " point of damage!" << std::endl;
@@ -74,7 +74,7 @@ void
 			this->setHitpoints(current_hp - amount);
 		else
 		{
-			std::cout << "ScavTrap " << name << " was destroyed..." << std::endl;
+			std::cout << "ScavTrap " << my_name << " was destroyed..." << std::endl;
 			this->setHitpoints(0);
 		}
 	}
