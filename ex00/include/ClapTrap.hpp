@@ -12,7 +12,7 @@ class ClapTrap
 		virtual ~ClapTrap();
 		ClapTrap 			&operator=(const ClapTrap &other);
 		const std::string	&getName() const;
-		void				setName(std::string const name);
+		void				setName(std::string const new_name);
 		const unsigned int	&getHitpoints() const;
 		void				setHitpoints(unsigned int value);
 		const unsigned int	&getEnergyPoints() const;
