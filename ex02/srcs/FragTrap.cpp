@@ -46,10 +46,10 @@ FragTrap
 void
 	FragTrap::attack(std::string const &target)
 {
-	unsigned int	attack_damage = this->getAttackDamage();
+	unsigned int	attack_damage_value = this->getAttackDamage();
 	std::cout << "FragTrap " << this->getName() << " attack " << target \
-	<< ", causing " << attack_damage;
-	if (attack_damage == 1)
+	<< ", causing " << attack_damage_value;
+	if (attack_damage_value == 1)
 		std::cout << " point of damage!" << std::endl;
 	else
 		std::cout << " points of damage!" << std::endl;
@@ -58,13 +58,13 @@ void
 void
 	FragTrap::takeDamage(unsigned int amount)
 {
-	std::string		name = this->getName();
+	std::string		my_name = this->getName();
 	unsigned int	current_hp = this->getHitpoints();
 	if (current_hp == 0)
-		std::cout << "FragTrap " << name << " has already been destroyed..." << std::endl;
+		std::cout << "FragTrap " << my_name << " has already been destroyed..." << std::endl;
 	else
 	{
-		std::cout << "FragTrap " << name << " get attacked, taking " \
+		std::cout << "FragTrap " << my_name << " get attacked, taking " \
 		<< amount;
 		if (amount == 1)
 			std::cout << " point of damage!" << std::endl;
@@ -74,7 +74,7 @@ void
 			this->setHitpoints(current_hp - amount);
 		else
 		{
-			std::cout << "FragTrap " << name << " was destroyed..." << std::endl;
+			std::cout << "FragTrap " << my_name << " was destroyed..." << std::endl;
 			this->setHitpoints(0);
 		}
 	}
