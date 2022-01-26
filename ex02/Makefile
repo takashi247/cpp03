@@ -27,6 +27,8 @@ RM			:= rm -rf
 
 DEBUG		:= -g# -fsanitize=address
 
+SHADOW		:= -Wshadow
+
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
@@ -47,6 +49,9 @@ re:			fclean all
 
 debug:		CXXFLAGS += $(DEBUG)
 debug:		re
+
+shadow:		CXXFLAGS += $(SHADOW)
+shadow:		re
 
 -include $(DEPS)
 
