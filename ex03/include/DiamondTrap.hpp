@@ -10,9 +10,9 @@ class DiamondTrap : public FragTrap, public ScavTrap
 	public:
 		DiamondTrap();
 		explicit DiamondTrap(const std::string name);
-		DiamondTrap(const DiamondTrap &other);
+		DiamondTrap(const DiamondTrap &copy);
 		virtual ~DiamondTrap();
-		DiamondTrap			&operator=(const DiamondTrap &other);
+		DiamondTrap			&operator=(const DiamondTrap &copy);
 		void				attack(std::string const &target);
 		void				takeDamage(unsigned int amount);
 		void				beRepaired(unsigned int amount);
@@ -25,4 +25,3 @@ class DiamondTrap : public FragTrap, public ScavTrap
 };
 
 #endif
-

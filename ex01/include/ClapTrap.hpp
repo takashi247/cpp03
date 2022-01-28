@@ -8,9 +8,9 @@ class ClapTrap
 	public:
 		ClapTrap();
 		explicit ClapTrap(const std::string name);
-		ClapTrap(const ClapTrap &other);
+		ClapTrap(const ClapTrap &copy);
 		virtual	~ClapTrap();
-		ClapTrap 					&operator=(const ClapTrap &other);
+		ClapTrap 					&operator=(const ClapTrap &copy);
 		const std::string			&getName() const;
 		void						setName(std::string const new_name);
 		const unsigned int			&getHitpoints() const;
@@ -33,4 +33,3 @@ class ClapTrap
 };
 
 #endif
-

@@ -9,9 +9,9 @@ class ScavTrap : virtual public ClapTrap
 	public:
 		ScavTrap();
 		explicit ScavTrap(const std::string name);
-		ScavTrap(const ScavTrap &other);
+		ScavTrap(const ScavTrap &copy);
 		virtual ~ScavTrap();
-		ScavTrap					&operator=(const ScavTrap &other);
+		ScavTrap					&operator=(const ScavTrap &copy);
 		void						attack(std::string const &target);
 		void						takeDamage(unsigned int amount);
 		void						beRepaired(unsigned int amount);
@@ -22,4 +22,3 @@ class ScavTrap : virtual public ClapTrap
 };
 
 #endif
-

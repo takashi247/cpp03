@@ -22,10 +22,10 @@ FragTrap::FragTrap(const std::string name):
 	std::cout << "FragTrap " << this->getName() << " was constructed" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &other)
+FragTrap::FragTrap(const FragTrap &copy)
 {
-	std::cout << "FragTrap " << other.getName() << " was copied" << std::endl;
-	*this = other;
+	std::cout << "FragTrap " << copy.getName() << " was copied" << std::endl;
+	*this = copy;
 }
 
 FragTrap::~FragTrap()
@@ -34,14 +34,14 @@ FragTrap::~FragTrap()
 }
 
 FragTrap
-	&FragTrap::operator=(const FragTrap &other)
+	&FragTrap::operator=(const FragTrap &copy)
 {
-	if (this != &other)
+	if (this != &copy)
 	{
-		this->setName(other.getName());
-		this->setHitpoints(other.getHitpoints());
-		this->setEnergyPoints(other.getEnergyPoints());
-		this->setAttackDamage(other.getAttackDamage());
+		this->setName(copy.getName());
+		this->setHitpoints(copy.getHitpoints());
+		this->setEnergyPoints(copy.getEnergyPoints());
+		this->setAttackDamage(copy.getAttackDamage());
 	}
 	return (*this);
 }
@@ -100,4 +100,3 @@ void
 {
 	std::cout << "FragTrap " << this->getName() << " requested a positive high fives" << std::endl;
 }
-

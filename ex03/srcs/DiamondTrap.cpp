@@ -22,10 +22,10 @@ DiamondTrap::DiamondTrap(const std::string name):
 	std::cout << "DiamondTrap " << this->getName() << " was constructed" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &other)
+DiamondTrap::DiamondTrap(const DiamondTrap &copy)
 {
-	std::cout << "DiamondTrap " << other.DiamondTrap::getName() << " was copied" << std::endl;
-	*this = other;
+	std::cout << "DiamondTrap " << copy.DiamondTrap::getName() << " was copied" << std::endl;
+	*this = copy;
 }
 
 DiamondTrap::~DiamondTrap()
@@ -34,15 +34,15 @@ DiamondTrap::~DiamondTrap()
 }
 
 DiamondTrap
-	&DiamondTrap::operator=(const DiamondTrap &other)
+	&DiamondTrap::operator=(const DiamondTrap &copy)
 {
-	if (this != &other)
+	if (this != &copy)
 	{
-		this->DiamondTrap::setName(other.DiamondTrap::getName());
-		this->ClapTrap::setName(other.ClapTrap::getName());
-		this->setHitpoints(other.getHitpoints());
-		this->setEnergyPoints(other.getEnergyPoints());
-		this->setAttackDamage(other.getAttackDamage());
+		this->DiamondTrap::setName(copy.DiamondTrap::getName());
+		this->ClapTrap::setName(copy.ClapTrap::getName());
+		this->setHitpoints(copy.getHitpoints());
+		this->setEnergyPoints(copy.getEnergyPoints());
+		this->setAttackDamage(copy.getAttackDamage());
 	}
 	return (*this);
 }
@@ -108,4 +108,3 @@ void
 {
 	this->name = new_name;
 }
-

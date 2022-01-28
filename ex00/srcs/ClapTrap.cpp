@@ -20,10 +20,10 @@ ClapTrap::ClapTrap(const std::string name):
 	std::cout << "ClapTrap " << name << " was constructed" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &other)
+ClapTrap::ClapTrap(const ClapTrap &copy)
 {
-	std::cout << "ClapTrap " << other.getName() << " was copied" << std::endl;
-	*this = other;
+	std::cout << "ClapTrap " << copy.getName() << " was copied" << std::endl;
+	*this = copy;
 }
 
 ClapTrap::~ClapTrap()
@@ -32,14 +32,14 @@ ClapTrap::~ClapTrap()
 }
 
 ClapTrap
-	&ClapTrap::operator=(const ClapTrap &other)
+	&ClapTrap::operator=(const ClapTrap &copy)
 {
-	if (this != &other)
+	if (this != &copy)
 	{
-		this->setName(other.getName());
-		this->setHitpoints(other.getHitpoints());
-		this->setEnergyPoints(other.getEnergyPoints());
-		this->setAttackDamage(other.getAttackDamage());
+		this->setName(copy.getName());
+		this->setHitpoints(copy.getHitpoints());
+		this->setEnergyPoints(copy.getEnergyPoints());
+		this->setAttackDamage(copy.getAttackDamage());
 	}
 	return (*this);
 }
@@ -140,4 +140,3 @@ void
 		std::cout << " points of hitpoints!" << std::endl;
 	this->setHitpoints(this->getHitpoints() + amount);
 }
-

@@ -19,10 +19,10 @@ ScavTrap::ScavTrap(const std::string name):
 	std::cout << "ScavTrap " << this->getName() << " was constructed" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other)
+ScavTrap::ScavTrap(const ScavTrap &copy)
 {
-	std::cout << "ScavTrap " << other.getName() << " was copied" << std::endl;
-	*this = other;
+	std::cout << "ScavTrap " << copy.getName() << " was copied" << std::endl;
+	*this = copy;
 }
 
 ScavTrap::~ScavTrap()
@@ -31,14 +31,14 @@ ScavTrap::~ScavTrap()
 }
 
 ScavTrap
-	&ScavTrap::operator=(const ScavTrap &other)
+	&ScavTrap::operator=(const ScavTrap &copy)
 {
-	if (this != &other)
+	if (this != &copy)
 	{
-		this->setName(other.getName());
-		this->setHitpoints(other.getHitpoints());
-		this->setEnergyPoints(other.getEnergyPoints());
-		this->setAttackDamage(other.getAttackDamage());
+		this->setName(copy.getName());
+		this->setHitpoints(copy.getHitpoints());
+		this->setEnergyPoints(copy.getEnergyPoints());
+		this->setAttackDamage(copy.getAttackDamage());
 	}
 	return (*this);
 }
