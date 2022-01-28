@@ -98,6 +98,5 @@ void
 void
 	ScavTrap::guardGate()
 {
-	std::cout << "ScavTrap " << this->getName() << " has enterred in Gate keeper mode" << std::endl;
+	std::cout << "ScavTrap " << this->getName() << " has entered in Gate keeper mode" << std::endl;
 }
-
