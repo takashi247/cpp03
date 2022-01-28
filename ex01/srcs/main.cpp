@@ -29,3 +29,4 @@ int
 	std::cout << std::endl;
 	delete c2; // test if destructor of ScavTrap is called properly
 }
+

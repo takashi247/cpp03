@@ -97,3 +97,4 @@ void
 {
 	std::cout << "FragTrap " << this->getName() << " requested a positive high fives" << std::endl;
 }
+

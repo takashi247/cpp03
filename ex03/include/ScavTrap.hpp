@@ -22,3 +22,4 @@ class ScavTrap : virtual public ClapTrap
 };
 
 #endif
+

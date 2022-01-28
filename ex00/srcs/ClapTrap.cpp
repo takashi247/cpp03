@@ -140,3 +140,4 @@ void
 		std::cout << " points of hitpoints!" << std::endl;
 	this->setHitpoints(this->getHitpoints() + amount);
 }
+

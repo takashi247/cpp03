@@ -100,3 +100,4 @@ void
 {
 	std::cout << "ScavTrap " << this->getName() << " has enterred in Gate keeper mode" << std::endl;
 }
+

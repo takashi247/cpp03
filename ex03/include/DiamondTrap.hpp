@@ -25,3 +25,4 @@ class DiamondTrap : public FragTrap, public ScavTrap
 };
 
 #endif
+
