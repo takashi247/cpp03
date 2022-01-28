@@ -22,4 +22,3 @@ int
     third.takeDamage(fourth.getAttackDamage());
     std::cout << std::endl;
 }
-

@@ -37,4 +37,3 @@ int
 	std::cout << std::endl;
 	delete c2;
 }
-

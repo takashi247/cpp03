@@ -29,4 +29,3 @@ int
 	delete ft_1;
 	delete st_1;
 }
-
