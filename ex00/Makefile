@@ -23,7 +23,7 @@ INCLUDE		:= -I./include
 
 RM			:= rm -rf
 
-DEBUG		:= -g# -fsanitize=address
+DEBUG		:= -g -fsanitize=address
 
 SHADOW		:= -Wshadow
 
