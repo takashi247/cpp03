@@ -110,10 +110,10 @@ void
 	std::string		my_name = this->getName();
 	unsigned int	current_hp = this->getHitpoints();
 	if (current_hp == 0)
-		std::cout << "ClapTrap " << my_name << " has already been destroyed..." << std::endl;
+		std::cout << my_name << " has already been destroyed..." << std::endl;
 	else
 	{
-		std::cout << "ClapTrap " << my_name << " get attacked, taking " \
+		std::cout << my_name << " get attacked, taking " \
 		<< amount;
 		if (amount == 1)
 			std::cout << " point of damage!" << std::endl;
@@ -123,7 +123,7 @@ void
 			this->setHitpoints(current_hp - amount);
 		else
 		{
-			std::cout << "ClapTrap " << my_name << " was destroyed..." << std::endl;
+			std::cout << my_name << " was destroyed..." << std::endl;
 			this->setHitpoints(0);
 		}
 	}
@@ -132,7 +132,7 @@ void
 void
 	ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout << "ClapTrap " << this->getName() << " get repaired, recovering " \
+	std::cout << this->getName() << " get repaired, recovering " \
 	<< amount;
 	if (amount == 1)
 		std::cout << " point of hitpoints!" << std::endl;

@@ -10,7 +10,7 @@ class ClapTrap
 		explicit ClapTrap(const std::string name);
 		ClapTrap(const ClapTrap &copy);
 		virtual	~ClapTrap();
-		ClapTrap					&operator=(const ClapTrap &copy);
+		ClapTrap 					&operator=(const ClapTrap &copy);
 		const std::string			&getName() const;
 		void						setName(std::string const new_name);
 		const unsigned int			&getHitpoints() const;
@@ -25,7 +25,7 @@ class ClapTrap
 		static const unsigned int	HITPOINTS_CT = 10;
 		static const unsigned int	ENERGY_POINTS_CT = 10;
 		static const unsigned int	ATTACK_DAMAGE_CT = 0;
-	private:
+	protected:
 		std::string					name;
 		unsigned int				hitpoints;
 		unsigned int				energy_points;
