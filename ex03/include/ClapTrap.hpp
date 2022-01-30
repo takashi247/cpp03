@@ -25,7 +25,7 @@ class ClapTrap
 		static const unsigned int	HITPOINTS_CT = 10;
 		static const unsigned int	ENERGY_POINTS_CT = 10;
 		static const unsigned int	ATTACK_DAMAGE_CT = 0;
-	private:
+	protected:
 		std::string					name;
 		unsigned int				hitpoints;
 		unsigned int				energy_points;
