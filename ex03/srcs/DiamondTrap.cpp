@@ -9,10 +9,6 @@ DiamondTrap::DiamondTrap():
 	hitpoints = FragTrap::HITPOINTS_FT;
 	energy_points = ScavTrap::ENERGY_POINTS_ST;
 	attack_damage = FragTrap::ATTACK_DAMAGE_FT;
-	// this->ClapTrap::setName(this->getName() + CLAP_NAME_SUFFIX);
-	// this->setHitpoints(FragTrap::HITPOINTS_FT);
-	// this->setEnergyPoints(ScavTrap::ENERGY_POINTS_ST);
-	// this->ScavTrap::setAttackDamage(FragTrap::ATTACK_DAMAGE_FT);
 	std::cout << "DiamondTrap without a name was constructed" << std::endl;
 }
 
